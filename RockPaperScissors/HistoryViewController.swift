@@ -10,6 +10,10 @@ import UIKit
 
 class HistoryViewController: UIViewController {
 
+    // MARK: Properties
+
+    var history: [RPSMatch]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

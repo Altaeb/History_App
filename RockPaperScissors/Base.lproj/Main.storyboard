@@ -19,8 +19,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Play!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgh-U1-uLB">
+                                <rect key="frame" x="168" y="772" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULk-cu-Xxv">
+                                <rect key="frame" x="182" y="52" width="50" height="30"/>
+                                <state key="normal" title="History">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showHistory:" destination="iYZ-Mq-4iF" eventType="touchUpInside" id="wfk-is-yVj"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDr-vO-WkA">
-                                <rect key="frame" x="279" y="281" width="75" height="65"/>
+                                <rect key="frame" x="279" y="471" width="75" height="65"/>
                                 <state key="normal" image="scissors">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -30,14 +45,8 @@
                                     <segue destination="7l5-Gp-aIR" kind="modal" identifier="throwDownScissors" id="Ih9-HG-qHO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Play!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgh-U1-uLB">
-                                <rect key="frame" x="168" y="772" width="78" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ay7-rG-oQ3">
-                                <rect key="frame" x="169.5" y="171" width="75" height="65"/>
+                                <rect key="frame" x="170" y="361" width="75" height="65"/>
                                 <state key="normal" image="paper">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -47,7 +56,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pQ-vK-SEv">
-                                <rect key="frame" x="60" y="281" width="75" height="65"/>
+                                <rect key="frame" x="60" y="471" width="75" height="65"/>
                                 <state key="normal" image="rock">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -59,14 +68,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Ay7-rG-oQ3" firstAttribute="centerX" secondItem="Fgh-U1-uLB" secondAttribute="centerX" id="ER3-Hd-3dl"/>
-                            <constraint firstItem="Ay7-rG-oQ3" firstAttribute="centerX" secondItem="uZk-oR-UzU" secondAttribute="centerX" id="ShH-vH-V8s"/>
-                            <constraint firstItem="2pQ-vK-SEv" firstAttribute="leading" secondItem="uZk-oR-UzU" secondAttribute="leadingMargin" constant="40" id="Y4E-zJ-fsT"/>
-                            <constraint firstItem="kDr-vO-WkA" firstAttribute="top" secondItem="Ay7-rG-oQ3" secondAttribute="bottom" constant="45" id="dDf-3F-LnF"/>
-                            <constraint firstItem="kDr-vO-WkA" firstAttribute="top" secondItem="2pQ-vK-SEv" secondAttribute="top" id="gWe-ML-OrK"/>
-                            <constraint firstItem="fqQ-nG-h6S" firstAttribute="top" secondItem="Fgh-U1-uLB" secondAttribute="bottom" constant="69" id="rK2-fH-g2c"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kDr-vO-WkA" secondAttribute="trailing" constant="40" id="tts-7X-HQC"/>
-                            <constraint firstItem="kDr-vO-WkA" firstAttribute="top" secondItem="uZk-oR-UzU" secondAttribute="top" constant="281" id="x7W-CJ-y4i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kDr-vO-WkA" secondAttribute="trailing" constant="40" id="CTH-Iy-iSj"/>
+                            <constraint firstItem="ULk-cu-Xxv" firstAttribute="centerX" secondItem="Ay7-rG-oQ3" secondAttribute="centerX" id="Hie-m3-xe9"/>
+                            <constraint firstItem="Ay7-rG-oQ3" firstAttribute="centerX" secondItem="Fgh-U1-uLB" secondAttribute="centerX" id="MUs-vq-FAV"/>
+                            <constraint firstItem="fqQ-nG-h6S" firstAttribute="top" secondItem="Fgh-U1-uLB" secondAttribute="bottom" constant="69" id="WGE-qm-r2M"/>
+                            <constraint firstItem="ULk-cu-Xxv" firstAttribute="centerX" secondItem="uZk-oR-UzU" secondAttribute="centerX" id="Wp3-zo-59O"/>
+                            <constraint firstItem="2pQ-vK-SEv" firstAttribute="leading" secondItem="uZk-oR-UzU" secondAttribute="leadingMargin" constant="40" id="eBO-Cx-QXh"/>
+                            <constraint firstItem="fqQ-nG-h6S" firstAttribute="top" secondItem="2pQ-vK-SEv" secondAttribute="bottom" constant="326" id="gHv-e2-NQz"/>
+                            <constraint firstItem="ULk-cu-Xxv" firstAttribute="top" secondItem="HUJ-al-Ubx" secondAttribute="bottom" constant="8" id="kis-u1-gld"/>
+                            <constraint firstItem="2pQ-vK-SEv" firstAttribute="top" secondItem="kDr-vO-WkA" secondAttribute="top" id="n5A-ut-eWK"/>
+                            <constraint firstItem="Ay7-rG-oQ3" firstAttribute="top" secondItem="uZk-oR-UzU" secondAttribute="top" constant="361" id="sRT-Ur-rBZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DRJ-HZ-SdQ"/>
@@ -84,7 +95,7 @@
         <!--History View Controller-->
         <scene sceneID="lGU-A3-PU9">
             <objects>
-                <viewController id="MW5-ag-dMm" customClass="HistoryViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryViewController" id="MW5-ag-dMm" customClass="HistoryViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0oV-I8-WC1"/>
                         <viewControllerLayoutGuide type="bottom" id="omF-E6-IMZ"/>
@@ -168,6 +179,6 @@
         <image name="scissors" width="75" height="65"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ih9-HG-qHO"/>
+        <segue reference="VKf-O8-YvW"/>
     </inferredMetricsTieBreakers>
 </document>

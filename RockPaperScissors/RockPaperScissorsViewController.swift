@@ -45,9 +45,6 @@ class RockPaperScissorsViewController: UIViewController {
         }
     }
     
-    @IBAction func showHistory(_ sender: AnyObject) {
-        //TODO: Present HistoryViewController
-    }
     
     // MARK: Play!
     
@@ -89,5 +86,17 @@ class RockPaperScissorsViewController: UIViewController {
         //Notice that this code works for both Scissors and Paper
         let controller = segue.destination as! ResultViewController
         controller.match = self.match
+    }
+
+    // MARK: Actions
+
+    @IBAction func showHistory(_ sender: AnyObject) {
+
+        let storyboard = self.storyboard
+        let controller = storyboard?.instantiateViewController(withIdentifier: "HistoryViewController")as! HistoryViewController
+
+        controller.history = self.history
+
+        self.present(controller, animated: true, completion: nil)
     }
 }

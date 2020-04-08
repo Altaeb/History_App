@@ -64,8 +64,8 @@
 			children = (
 				ED3A4E181A01B7E5002B8AA1 /* AppDelegate.swift */,
 				EDA5EFB41A02BFB800AABA2F /* RockPaperScissorsViewController.swift */,
-				B6312529243E369B0048352F /* HistoryViewController.swift */,
 				EDA5EFB21A02B4F200AABA2F /* ResultViewController.swift */,
+				B6312529243E369B0048352F /* HistoryViewController.swift */,
 				4D08C4CA1A16B28300A95F43 /* RPS.swift */,
 				4D08C4CC1A16B29700A95F43 /* RPSMatch.swift */,
 				4D37A9B71A3916A6007035E1 /* Main.storyboard */,
