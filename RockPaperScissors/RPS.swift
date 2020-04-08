@@ -11,13 +11,14 @@ import Foundation
 // MARK: - RPS
 
 // The RPS enum represents a move.
+
 enum RPS {
     case rock, paper, scissors
 
     // The init method randomly generates the opponent's move
     init() {
         switch arc4random() % 3 {
-        
+
         case 0:
             self = .rock
         case 1:
@@ -27,21 +28,23 @@ enum RPS {
         }
     }
 
-    // The defeats method defines the hierarchy of moves, Rock defeats Scissors etc. 
+    // The defeats method defines the hierarchy of moves, Rock defeats Scissors etc.
     func defeats(_ opponent: RPS) -> Bool {
+
         switch (self, opponent) {
-        case (.paper, .rock), (.scissors, .paper), (.rock, .scissors):
-            return true;
-        default:
+        case (.rock, .paper), (.paper, .scissors), (.scissors, .rock):
             return false;
+        default:
+            return true;
         }
     }
+
 }
 
 // MARK: - RPS: CustomStringConvertible
 
 extension RPS: CustomStringConvertible {
-    
+
     var description: String {
         get {
             switch (self) {
@@ -55,3 +58,4 @@ extension RPS: CustomStringConvertible {
         }
     }
 }
+
